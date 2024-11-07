@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.3.4"
 
 gem "rails", "~> 7.0.8", ">= 7.0.8.6"
+gem 'blueprinter', '~> 1.1', '>= 1.1.2'
 gem "bootsnap", require: false
 gem "devise", "~> 4.9"
 gem "importmap-rails"
