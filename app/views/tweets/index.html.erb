@@ -1,0 +1,11 @@
+<%= render "layouts/side_menu" %>
+<div class="flex flex-col overflow-y-scroll max-h-screen">
+    <% if current_user.present? %>
+        <%= turbo_frame_tag "new_tweet" do %>
+            <%= render "form", model: @new_tweet%>
+        <%end%>
+    <%end%>
+    <% @tweets.each do |tweet|%>
+        <%= render "tweet", tweet: tweet %>
+    <%end%>
+</div>
